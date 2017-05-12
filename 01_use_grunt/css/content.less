@@ -1,0 +1,220 @@
+/**
+ * 阅读器页面主内容标签样式
+ * 
+ * @author gli-jiangxq 20160813
+ */
+p{
+    >span.read-placeholder {
+        display: inline-block;
+        width: 2em;
+    }
+}
+book_chapter_section_para {
+    width: 100%;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top-width: 1px;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: solid;
+    border-top-color: #aaa;
+    border-right-color: #aaa;
+    border-bottom-color: #aaa;
+    border-left-color: #aaa;
+    font-size: inherit;
+    line-height: 150%;
+    text-align: center;
+    thead,
+    tbody {
+        tr {
+            td {
+                border-right-width: 1px;
+                border-bottom-width: 1px;
+                border-right-style: solid;
+                border-bottom-style: solid;
+                border-right-color: #aaa;
+                border-bottom-color: #aaa;
+                padding: 6px;
+                span {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+center.read-tbl-big-data {
+    position: relative;
+    background-color: #e5e5e5;
+    padding: 3px;
+    border: solid 1px transparent;
+    > .read-open-pop {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        pointer-events: none;
+        background-image: url("img/mask/mask_open_btn.png");
+        background-size: contain;
+    }
+    > .read-tbl-wrap {
+        position: relative;
+        width: 100%;
+        // height: 100px;
+        background-color: #ffffff;
+        overflow: hidden;
+    }
+}
+center {
+    overflow: hidden;
+}
+center > table {
+    background-color: white;
+}
+.read-comm-table {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ECECEC;
+    font-size: 0.28em;
+    z-index: 150;
+    overflow: hidden;
+    >.read-comm-tbl-wrap {
+        position: relative;
+        height: 90%;
+        margin-top: 40px;
+        padding: 0 10px;
+        background-color: #dddddd;
+        box-sizing: content-box;
+        overflow: scroll;
+        > table {
+            position: relative;
+            margin-top: 10px;
+            background-color: #ffffff;
+        }
+    }
+    > .read-close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        height: 20px; 
+        width: 20px;
+        background-image: url("img/mask/mask_close_btn.png");
+        background-size: contain;
+    }
+}
+
+
+/*避免阅读器内h标签样式被影响*/
+/* 重置阅读器内所有标签样式  避免被外部影响 */
+.read-reader-mobile,
+.read-reader-pad,
+.read-reader-pc {
+    word-break: normal;
+
+    h1, h2, h3, h4, h5, h6 {
+        display: block;
+        font-weight: bold;
+        line-height: normal;
+    }
+    h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+    }
+    h2 {
+        font-size: 1.5em;
+        margin: 0.83em 0;
+    }
+    h3 {
+        font-size: 1.17em;
+        margin: 1em 0;
+    }
+    h4 {
+        margin: 1.33em 0;
+    }
+    h5 {
+        font-size: 0.83em;
+        margin: 1.67em 0;
+    }
+    h6 {
+        font-size: 0.67em;
+        margin: 2.33em 0;
+    }
+}
+
+/* 注脚 */
+footnote{
+    background: pink;
+    display: none;
+}
+
+.read-footnote-mark {
+    cursor:pointer;
+    
+    &:after{
+        content: "注";
+        font-weight: bold;
+        background: #FFEB3B;
+    }
+}
+
+.read-footnote-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+    background-color: rgba(130,130,130,.6);
+    .read-footnote-exitdiv{
+        position:absolute;
+        height: 20px;
+        background-color: #FFFFFF;
+        .read-footnote-exit{
+            position: absolute;
+            top: -5px;
+            right: -2px;
+            height: 30px;
+            width: 30px;
+            background-image: url(img/day/close-footnote.png);
+            background-size: contain;
+            cursor: pointer;
+        }
+    }
+    .read-footnote-div{
+        position:absolute;
+        background-color: rgba(130,130,130,.9);
+        overflow-y: auto;
+        
+        .read-footnote-txt{
+            position:relative;
+            left: 10px;
+            top: 10px;
+            width: 96%;
+            text-align: justify;
+            display: inline-block;
+            border-radius: 0.3em;
+            color: #FFFFFF;
+        }
+    }
+    
+}
+.read-highlight {
+    color: red;
+}
+
+.read-tv-a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: initial;
+    outline: none;
+    text-decoration: none;
+}
