@@ -1,0 +1,16 @@
+{
+  "name": "DEMO",
+  "version": "1.0.0",
+  "description": "demo for developing",
+  "directories": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "amdclean": "^2.7.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-requirejs": "^1.0.0"
+  }
+}
